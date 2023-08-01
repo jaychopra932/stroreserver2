@@ -124,10 +124,10 @@ app.get("/purchases",function(req,res){
                 arr=arr.sort((a,b)=>b.quantity-a.quantity)
             }
             if(sortBy=="ValueAsc"){
-                arr=sort((a,b)=>(a.quantity*a.price)-(b.quantity*b.price))
+                arr=arr.sort((a,b)=>(a.quantity*a.price)-(b.quantity*b.price))
             }
             if(sortBy=="ValueDesc"){
-                arr=sort((a,b)=>(b.quantity*b.price)-(a.quantity*a.price))
+                arr=arr.sort((a,b)=>(b.quantity*b.price)-(a.quantity*a.price))
             }
             res.send(arr)
         }
